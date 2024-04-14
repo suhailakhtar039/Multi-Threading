@@ -7,6 +7,7 @@ public class Example4 {
         // thread.interrupt();
         Thread thread = new Thread(new LongComputationTask(new BigInteger("2"),new BigInteger("5")));
 
+        thread.setDaemon(true);
         thread.start();
         thread.interrupt();
     }
